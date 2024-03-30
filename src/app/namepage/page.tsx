@@ -1,10 +1,18 @@
-import Link from 'next/link';
+"use client"
 
-export default function namepage (){
+import { useRouter } from 'next/navigation'; 
+
+function namepage (){
+   const router = useRouter();
+   console.log(router)
   return (
     <div>Nabeera khan
-    <br/>
-    <Link href = '/'>back</Link>
+      <br/>
+    <button onClick={(e) => router.push('/')}>
+     <a>back</a> 
+    </button>
     </div>
+    
   )
 }
+export default namepage;
