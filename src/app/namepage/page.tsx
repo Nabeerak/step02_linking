@@ -1,16 +1,9 @@
-"use client"
-
-import { useRouter } from 'next/navigation'; 
-
+import Link from 'next/link';
 function namepage (){
-   const router = useRouter();
-   console.log(router)
   return (
     <div>Nabeera khan
       <br/>
-    <button onClick={(e) => router.push('/')}>
-     <a>back</a> 
-    </button>
+      <Link href = "/">back</Link>
     </div>
     
   )
